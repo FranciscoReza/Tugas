@@ -1,0 +1,17 @@
+def convolution(a,o):
+len_x = len(a)
+len_h = len(o)
+len_result = len_x + len_h - 1
+result = [0] * len_result
+for n in range(len_result):
+ for k in range(len_x):
+  if n - k >= 0 and n - k < len_h:
+   result[n] += x[k] * h[n-k]
+return result
+
+x = [6,7,8,9]
+h = [0.5,0.25,0.1]
+result = convolution(x, h)
+print("Hasil=", result)
+print("Nama:Francisco Reza Ramadhan")
+print("NRP:5009201070")
